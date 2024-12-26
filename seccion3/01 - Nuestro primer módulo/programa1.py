@@ -1,6 +1,6 @@
-from module import suml, prodl
+from module import suma, producto
 
-zeroes = [0 for i in range(5)]
-ones = [1 for i in range(5)]
-print(suml(zeroes))  # Salida: 0
-print(prodl(ones))   # Salida: 1
+ceros = [0 for i in range(5)]
+unos = [1 for i in range(5)]
+print(suma(ceros))  # Salida: 0
+print(producto(unos))   # Salida: 1

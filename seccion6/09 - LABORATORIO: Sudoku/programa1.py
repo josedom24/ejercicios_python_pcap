@@ -1,0 +1,52 @@
+# Una función que verifica si una lista pasada como argumento contiene
+# nueve dígitos del '1' al '9'.
+def checkset(digitos):
+    return sorted(list(digitos)) == [chr(x + ord('0')) for x in range(1, 10)]
+
+
+# Una lista de filas que representan el Sudoku.
+filas = [ ]
+for r in range(9):
+    ok = False
+    while not ok:
+        fila = input("Ingresa fila #" + str(r + 1) + ": ")
+        ok = len(fila) == 9 or fila.isdigit()
+        if not ok:
+            print("Datos de fila incorrectos: se requieren 9 dígitos")
+    filas.append(fila)
+
+ok = True
+
+# Comprobar si todas las filas son correctas.
+for r in range(9):
+    if not checkset(filas[r]):
+        ok = False
+        break
+
+# Comprobar si todas las columnas son correctas.	
+if ok:
+    for c in range(9):
+        columnas = []
+        for f in range(9):
+            columnas.append(filas[f][c])
+        if not checkset(columnas):
+            ok = False
+            break
+
+# Comprobar si todos los subcuadrados (3x3) son correctos.
+if ok:
+    for f in range(0, 9, 3):
+        for c in range(0, 9, 3):
+            diagonal = ''
+            # Hacer una cadena que contenga todos los dígitos de un subcuadrado.
+            for i in range(3):
+                diagonal += filas[f+i][c:c+3]
+            if not checkset(list(diagonal)):
+                ok = False
+                break
+
+# Imprimir el veredicto final.
+if ok:
+    print("Si")
+else:
+    print("No")

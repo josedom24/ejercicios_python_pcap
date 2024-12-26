@@ -37,11 +37,11 @@ if ok:
 if ok:
     for f in range(0, 9, 3):
         for c in range(0, 9, 3):
-            diagonal = ''
+            cuadro = ''
             # Hacer una cadena que contenga todos los dígitos de un subcuadrado.
             for i in range(3):
-                diagonal += filas[f+i][c:c+3]
-            if not checkset(list(diagonal)):
+                cuadro += filas[f+i][c:c+3]
+            if not checkset(list(cuadro)):
                 ok = False
                 break
 

@@ -3,7 +3,7 @@ import time
 # asctime() convierte un objeto struct_time o una tupla que representa el tiempo en una cadena en un formato legible. 
 # mktime() convierte un objeto struct_time o una tupla que expresa la hora local a una marca de tiempo.
 
-#El formato de la tupla con la que vamos a trabajr tiene la siguiente estructura:
+#El formato de la tupla con la que vamos a trabajar tiene la siguiente estructura:
 #
 #    tm_year (año)
 #    tm_mon (mes, 1-12)

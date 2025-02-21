@@ -1,6 +1,7 @@
 from datetime import date
 from datetime import timedelta
 
+# Una vez que se obtiene un objeto timedelta, se pueden realizar varias operaciones como sumar o restar días, horas, minutos, etc
 # Crear un objeto timedelta
 delta = timedelta(days=5, hours=2, minutes=30)
 

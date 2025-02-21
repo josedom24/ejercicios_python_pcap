@@ -1,5 +1,8 @@
 import time
 
+# asctime() convierte un objeto struct_time o una tupla que representa el tiempo en una cadena en un formato legible. 
+# mktime() convierte un objeto struct_time o una tupla que expresa la hora local a una marca de tiempo.
+
 # Timestamp específico
 timestamp = 1572879180
 
